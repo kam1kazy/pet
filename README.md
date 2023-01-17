@@ -14,7 +14,7 @@
 
 `Framer Motion` - создание анимации
 
-`React-Hook-Form & Zod` - формы и валидация (~~_хорошо бы Formik взять_~~)
+`React Hook Form` & `Zod` - формы и валидация (~~_хорошо бы Formik взять_~~)
 
 `React Router` - маршрутизации
 
