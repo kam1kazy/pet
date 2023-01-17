@@ -6,12 +6,19 @@
 
 `Zustand` - менеджер глобального состояния
 
-`Axios` - для запросов к базе
+`Axios` - для REST запросов
+
+`React Query` — управление состоянием сервера
 
 `Styled Components` - стилизация компонентов
 
 `Framer Motion` - создание анимации
 
+`React-Hook-Form & Zod` - формы и валидация (~~_хорошо бы Formik взять_~~)
+
+`React Router` - маршрутизации
+
+`React Cookie` - ну ты понял
 
 ᄽὁȍ ̪ őὀᄿ
 
