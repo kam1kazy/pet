@@ -1,19 +1,18 @@
-import Alerts from './components/toolbar/alerts'
-import Menu from './components/toolbar/menu'
-import Settings from './components/toolbar/settings'
-import Search from './components/toolbar/search'
-import Bookmark from './components/toolbar/bookmark'
+import Settings from './components/toolbars/settings'
+import Search from './components/toolbars/search'
+import Bookmark from './components/toolbars/bookmark'
+
+import Header from './containers/header'
 
 function App() {
 	return (
-		<main>
-			<h1>TRAP</h1>
-			<Alerts />
-			<Menu />
-			<Settings />
+		<>
+			<Header />
+
 			<Search />
+			<Settings />
 			<Bookmark />
-		</main>
+		</>
 	)
 }
 
