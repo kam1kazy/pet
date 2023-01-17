@@ -1,6 +1,6 @@
-import React from 'react'
-import { CiBookmarkMinus } from 'react-icons/ci'
+import React from "react"
+import { CiBookmarkMinus } from "react-icons/ci"
 
-export default function index() {
-	return <CiBookmarkMinus />
+export default function Bookmark() {
+  return <CiBookmarkMinus />
 }
