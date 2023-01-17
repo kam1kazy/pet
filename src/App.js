@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Alerts from './components/toolbar/alerts'
+import Menu from './components/toolbar/menu'
+import Settings from './components/toolbar/settings'
+import Search from './components/toolbar/search'
+import Bookmark from './components/toolbar/bookmark'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<main>
+			<h1>TRAP</h1>
+			<Alerts />
+			<Menu />
+			<Settings />
+			<Search />
+			<Bookmark />
+		</main>
+	)
 }
 
-export default App;
+export default App
