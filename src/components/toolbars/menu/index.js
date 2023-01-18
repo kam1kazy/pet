@@ -1,6 +1,11 @@
-import React from "react"
-import { RiMistLine } from "react-icons/ri"
+import React from 'react'
+import styles from './index.module.scss'
+import { RiMistLine } from 'react-icons/ri'
 
 export default function Menu() {
-  return <RiMistLine />
+	return (
+		<div className={styles.menu}>
+			<RiMistLine />
+		</div>
+	)
 }

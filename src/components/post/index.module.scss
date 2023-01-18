@@ -1,0 +1,48 @@
+.post {
+	width: 100%;
+	margin: 0 auto 2rem;
+	padding: 0.5rem 0.5rem 1rem;
+
+	&__header {
+		border-bottom: 1px solid #eee;
+		padding: 0 0.5rem 0.5rem;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	&__time {
+		font-weight: 100;
+		font-size: 0.7rem;
+		margin-left: 1rem;
+	}
+
+	&__content {
+		padding: 1rem 0.8rem;
+	}
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 2.2rem;
+		margin-bottom: 1rem;
+	}
+	&__message {
+		line-height: 2rem;
+	}
+
+	&__tags {
+		font-size: 0.7rem;
+		font-weight: 300;
+		opacity: 0.5;
+		text-transform: uppercase;
+
+		ul {
+			display: flex;
+			justify-content: flex-end;
+		}
+		li {
+			margin-left: 0.6rem;
+		}
+	}
+}

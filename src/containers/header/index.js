@@ -1,17 +1,15 @@
-import React from "react"
-import Alerts from "../../components/toolbars/alerts"
-import Menu from "../../components/toolbars/menu"
+import React from 'react'
+import styles from './index.module.scss'
+
+import Alerts from '../../components/toolbars/notification'
+import Menu from '../../components/toolbars/menu'
 
 export default function Header() {
-  return (
-    <section className='header'>
-      <div className='menu'>
-        <Menu />
-      </div>
-      <h1>TRAP</h1>
-      <div className='notification'>
-        <Alerts />
-      </div>
-    </section>
-  )
+	return (
+		<section className={styles.header}>
+			<Menu />
+			<h1 className={styles.brand}>TRAP</h1>
+			<Alerts />
+		</section>
+	)
 }
