@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Post({ title, description, time, author, tags }) {
+export default function Post({ title, description, time, tags }) {
   return (
     <div className='post'>
       <div className='post__header'>

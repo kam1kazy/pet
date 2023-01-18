@@ -14,6 +14,6 @@ export const useTagsStore = create((set) => ({
     })),
   removeTag: (id) =>
     set((state) => ({
-      tags: state.tags.filter((pokemon) => pokemon.id !== id),
+      tags: state.tags.filter((tag) => tag.id !== id),
     })),
 }))

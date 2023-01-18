@@ -1,0 +1,34 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "author": "Dope Den",
+            "tags": [
+                {
+                    "tagName": "Музыка"
+                },
+                {
+                    "tagName": "Дизайн"
+                }
+            ],
+            "time": "2 hr ago",
+            "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero?",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officiis cum veritatis harum illum atque quidem iste odio ullam modi, nihil numquam aperiam aliquid quia fuga. Nostrum hic aut voluptates!"
+        },
+        {
+            "id": 2,
+            "author": "Dope Den",
+            "tags": [
+                {
+                    "tagName": "Письки"
+                },
+                {
+                    "tagName": "Титьки"
+                }
+            ],
+            "time": "4 hr ago",
+            "title": "Doklem ipsum  consectetur adipisicing elit.",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus officiis cum veritatis harum illum atque quidem iste odio ullam modi, nihil numquam aperiam aliquid quia fuga. Nostrum hic aut voluptates!"
+        }
+    ]
+}

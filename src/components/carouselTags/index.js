@@ -1,7 +1,7 @@
 import React from "react"
 import { useTagsStore } from "../../store/tagsStore"
 
-export default function Carousel() {
+export default function CarouselTags() {
   const tagsArr = useTagsStore((state) => state.tags)
 
   return (
