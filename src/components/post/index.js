@@ -7,13 +7,13 @@ export default function Post({ title, description, time, tags }) {
 			<div className={styles.post__header}>
 				<div className={styles.post__tags}>
 					<ul>
-						{tags.map((tag, i) => {
+						{tags?.map((tag, i) => {
 							return <li key={i}>#{tag.tagName}</li>
 						})}
 					</ul>
 				</div>
 				<div className={styles.post__time}>
-					<p>{time}</p>
+					<p>{time ? time : ''}</p>
 				</div>
 			</div>
 

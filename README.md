@@ -8,7 +8,7 @@
 
 `Axios` - для REST запросов
 
-`React Query` — управление состоянием сервера
+`React Query, Axios` — управление состоянием сервера
 
 `Styled Components` - стилизация компонентов
 

@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import { PostService } from '../services/post.service'
 
 export const usePostsStore = create((set, get) => ({
 	loading: false,
@@ -19,9 +20,8 @@ export const usePostsStore = create((set, get) => ({
 		set({ loading: true })
 
 		try {
-			const response = await fetch('http://localhost:3001/posts')
-			if (!response.ok) throw response
-			set({ posts: await response.json() })
+			const response = await PostService.getAll()
+			set({ posts: await response })
 		} catch (e) {
 			let error = e
 			// custom error
