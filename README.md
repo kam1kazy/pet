@@ -6,9 +6,7 @@
 
 `Zustand` - менеджер глобального состояния
 
-`Axios` - для REST запросов
-
-`React Query, Axios` — управление состоянием сервера
+`React Query (tanstack)` & `Axios` — управление состоянием сервера и REST запросы
 
 `Styled Components` - стилизация компонентов
 
@@ -18,7 +16,7 @@
 
 `React Router` - маршрутизации
 
-`React Cookie` - ну ты понял
+`json-server` & `concurrently` - запуск локального сервера параллельно с проектом
 
 ᄽὁȍ ̪ őὀᄿ
 
