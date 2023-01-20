@@ -1,0 +1,62 @@
+.rdw-editor-wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-flow: column;
+	flex: 1 1 auto;
+}
+.rdw-editor-main {
+	margin-top: 1.375rem;
+}
+.public-DraftStyleDefault-block {
+	margin: 0;
+}
+.rdw-editor-toolbar {
+	background: transparent;
+	justify-content: space-between;
+	padding: 0;
+	border: 0;
+}
+.rdw-option-wrapper {
+	background: transparent;
+	border: 0;
+	margin: 0;
+}
+.rdw-block-dropdown {
+	width: 80px;
+	background-color: transparent;
+	border: 0;
+}
+.rdw-block-wrapper,
+.rdw-list-wrapper,
+.rdw-text-align-wrapper,
+.rdw-image-wrapper,
+.rdw-inline-wrapper {
+	margin: 0;
+}
+.rdw-fontsize-wrapper,
+.rdw-fontfamily-wrapper,
+.rdw-link-wrapper,
+.rdw-embedded-wrapper,
+.rdw-emoji-wrapper,
+.rdw-remove-wrapper,
+.rdw-history-wrapper {
+	display: none;
+}
+.rdw-list-wrapper > div {
+	display: none;
+}
+.rdw-list-wrapper > div:first-child {
+	display: block;
+}
+.rdw-text-align-wrapper > div:last-child {
+	display: none;
+}
+.rdw-colorpicker-wrapper {
+	display: none;
+}
+
+.rdw-inline-wrapper > div:nth-child(5),
+.rdw-inline-wrapper > div:nth-child(6),
+.rdw-inline-wrapper > div:nth-child(7) {
+	display: none;
+}

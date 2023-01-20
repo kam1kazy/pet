@@ -1,28 +1,16 @@
-import React, { useState } from "react"
-import styles from "./index.module.scss"
+import React from 'react'
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 
-import CreatePostButton from "../../components/toolbars/createPost"
-import Search from "../../components/toolbars/search"
+import CreatePostButton from '../../components/toolbars/createPost'
+import Search from '../../components/toolbars/search'
 
-import ModalWindows from "../../components/modals/createPost"
+import styles from './index.module.scss'
 
 export default function ToolBars() {
-  const [showModal, setShowModal] = useState(false)
-
-  return (
-    <section className={styles.toolbar}>
-      <Search />
-      <CreatePostButton onOpen={() => setShowModal(true)} />
-
-      {showModal && (
-        <ModalWindows
-          show={showModal}
-          title='Тестовая модалка'
-          onClose={() => setShowModal(false)}
-        >
-          Тут динамический контент
-        </ModalWindows>
-      )}
-    </section>
-  )
+	return (
+		<section className={styles.toolbar}>
+			<Search />
+			<CreatePostButton />
+		</section>
+	)
 }

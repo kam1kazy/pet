@@ -8,7 +8,7 @@ export default function Header() {
 	return (
 		<section className={styles.header}>
 			<Menu />
-			<h1 className={styles.brand}>TRAP</h1>
+			<h1 className={styles.brand}>Diary</h1>
 			<Alerts />
 		</section>
 	)
