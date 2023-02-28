@@ -1,4 +1,4 @@
-import Toolbars from '../containers/toolbars'
+import Toolbars from '../containers/toolbar'
 import CarouselTags from '../components/carouselTags'
 import Posts from '../containers/posts'
 import Footer from '../containers/footer'
