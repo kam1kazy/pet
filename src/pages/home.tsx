@@ -12,7 +12,6 @@ function App() {
 			<Toolbars />
 			<CarouselTags />
 			<Posts />
-			<Footer />
 		</>
 	)
 }

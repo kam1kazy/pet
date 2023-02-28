@@ -31,7 +31,6 @@ root.render(
 		<QueryClientProvider client={queryClient}>
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
-				<Header />
 				<RouterProvider router={routesConfig} fallbackElement={<PreLoader />} />
 			</ThemeProvider>
 		</QueryClientProvider>
