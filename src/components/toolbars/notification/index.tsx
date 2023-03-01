@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 import { RiNotificationLine } from 'react-icons/ri'
+import { useState } from 'react'
 
 const Notification = styled.div`
+	position: relative;
+
 	svg {
 		width: 1.563rem;
 		height: 1.563rem;
@@ -16,10 +19,98 @@ const Notification = styled.div`
 	}
 `
 
+const MessageList = styled.div`
+	position: absolute;
+	top: 45px;
+	right: -40px;
+	width: 350px;
+	height: 275px;
+	background: white;
+	z-index: 2;
+	border-radius: 4px;
+	padding: 20px 10px 15px 10px;
+	box-shadow: 0px 5px 10px 2px rgb(34 60 80 / 10%);
+
+	ul {
+		height: 245px;
+		overflow-y: scroll;
+		padding-left: 28px;
+
+		-ms-overflow-style: none; /* Internet Explorer 10+ */
+		scrollbar-width: none; /* Firefox */
+		&::-webkit-scrollbar {
+			display: none; /* Safari and Chrome */
+		}
+	}
+
+	li {
+		margin-bottom: 20px;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 3px;
+			left: -20px;
+			width: 9px;
+			height: 9px;
+			background-color: #f3e576;
+			border-radius: 100%;
+		}
+	}
+
+	h6 {
+		margin-bottom: 5px;
+	}
+
+	p {
+		font-size: 13px;
+		font-weight: 100;
+		color: #7b7b7b;
+	}
+`
+
 export default function Alert() {
+	const [toggle, setToggle] = useState(false)
+
 	return (
 		<Notification>
-			<RiNotificationLine />
+			<RiNotificationLine onClick={() => setToggle(!toggle)} />
+			{toggle ? (
+				<MessageList>
+					<ul>
+						<li>
+							<h6>Title Message</h6>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+								odio non commodi animi minima!
+							</p>
+						</li>
+						<li>
+							<h6>Title Message</h6>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+								odio non commodi animi minima!
+							</p>
+						</li>
+						<li>
+							<h6>Title Message</h6>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+								odio non commodi animi minima!
+							</p>
+						</li>
+						<li>
+							<h6>Title Message</h6>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+								odio non commodi animi minima!
+							</p>
+						</li>
+					</ul>
+				</MessageList>
+			) : null}
 		</Notification>
 	)
 }

@@ -9,6 +9,7 @@ import styled from 'styled-components'
 const PostsArea = styled.section`
 	flex: 1 1 auto;
 	overflow-y: scroll;
+
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 	scrollbar-width: none; /* Firefox */
 	&::-webkit-scrollbar {
@@ -20,7 +21,7 @@ export default function Posts() {
 	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
 	const isLoading = usePostsStore((state) => state.loading)
 
-	if (isLoading) return <div>Loading...</div>
+	if (isLoading) return <section>Loading...</section>
 
 	type TypePost = {
 		id: number
