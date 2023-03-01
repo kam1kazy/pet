@@ -11,7 +11,6 @@ import routesConfig from './routes/routesConfig'
 import GlobalStyle from './template/styles'
 import theme from './template/styles/_variable'
 // Components
-import Header from './containers/header'
 import PreLoader from './pages/preloader'
 
 // import './template/styles/index.scss'

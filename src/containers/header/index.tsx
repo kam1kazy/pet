@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import Alerts from '../../components/toolbars/notification'
 import Menu from '../../components/toolbars/menu'
+import { Link } from 'react-router-dom'
 
 const HeaderArea = styled.section`
 	display: flex;
@@ -9,7 +10,7 @@ const HeaderArea = styled.section`
 	align-items: center;
 	margin-bottom: 2.1875rem;
 `
-const Brand = styled.a`
+const Brand = styled(Link)`
 	text-align: center;
 	font-size: 2.25rem;
 	position: relative;
@@ -38,7 +39,7 @@ export default function Header() {
 	return (
 		<HeaderArea>
 			<Menu />
-			<Brand>Diary</Brand>
+			<Brand to='/'>Diary</Brand>
 			<Alerts />
 		</HeaderArea>
 	)

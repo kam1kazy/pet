@@ -1,4 +1,6 @@
-.footer {
+import styled from 'styled-components'
+
+const FooterArea = styled.section`
 	text-align: center;
 	font-size: 1.875rem;
 	position: absolute;
@@ -30,4 +32,12 @@
 	&::before {
 		right: 1.875rem;
 	}
+`
+
+export default function Footer() {
+	return (
+		<FooterArea>
+			<span>.</span>
+		</FooterArea>
+	)
 }

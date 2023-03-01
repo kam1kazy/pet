@@ -55,12 +55,12 @@ const ListElement = styled.li`
 
 export default function CarouselTags() {
 	const tagsArr = useTagsStore((state) => state.tags)
-	type TagArray = { id: number; name: string }
+	type TagArrayType = { id: number; name: string }
 
 	return (
 		<CarouselArea>
 			<TagList>
-				{tagsArr.map((tag: TagArray) => {
+				{tagsArr.map((tag: TagArrayType) => {
 					return <ListElement key={tag.id}># {tag.name}</ListElement>
 				})}
 			</TagList>
