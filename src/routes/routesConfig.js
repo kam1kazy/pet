@@ -7,11 +7,11 @@ import Footer from '../containers/footer'
 const routesConfig = createBrowserRouter([
 	{
 		element: (
-			<section>
+			<>
 				<Header />
 				<Outlet />
 				<Footer />
-			</section>
+			</>
 		),
 		children: [
 			{
