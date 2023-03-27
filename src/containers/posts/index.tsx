@@ -6,17 +6,6 @@ import Post from '../../components/post'
 // Стили
 import styled from 'styled-components'
 
-const PostsArea = styled.section`
-	flex: 1 1 auto;
-	overflow-y: scroll;
-
-	-ms-overflow-style: none; /* Internet Explorer 10+ */
-	scrollbar-width: none; /* Firefox */
-	&::-webkit-scrollbar {
-		display: none; /* Safari and Chrome */
-	}
-`
-
 export default function Posts() {
 	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
 	const isLoading = usePostsStore((state) => state.loading)
@@ -38,6 +27,7 @@ export default function Posts() {
 					return (
 						<Post
 							key={post.id}
+							id={post.id}
 							time={post.time}
 							title={post.title}
 							body={post.body}
@@ -49,3 +39,14 @@ export default function Posts() {
 		</PostsArea>
 	)
 }
+
+const PostsArea = styled.section`
+	flex: 1 1 auto;
+	overflow-y: scroll;
+
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+	&::-webkit-scrollbar {
+		display: none; /* Safari and Chrome */
+	}
+`

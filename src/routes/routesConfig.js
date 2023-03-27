@@ -3,6 +3,7 @@ import Home from '../pages/home'
 import CreatePost from '../pages/createpost'
 import Header from '../containers/header'
 import Footer from '../containers/footer'
+import PostPage from '../pages/postpage'
 
 const routesConfig = createBrowserRouter([
 	{
@@ -24,11 +25,11 @@ const routesConfig = createBrowserRouter([
 			},
 			{
 				path: '/posts',
-				// element: <Home />,
+				element: <Home />,
 			},
 			{
 				path: '/posts/:id/',
-				// element: <Home />,
+				element: <PostPage />,
 			},
 			{
 				path: '/settings',

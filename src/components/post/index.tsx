@@ -1,4 +1,36 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
+export default function Post({ time, title, body, tags, id }: TypePost) {
+	return (
+		<PostArea>
+			<Header>
+				<Tags>
+					<ul>
+						{tags?.map((tag, id) => {
+							return <li key={id}>#{tag.tagName}</li>
+						})}
+					</ul>
+				</Tags>
+				<Time>
+					<p>{time ? time : ''}</p>
+				</Time>
+			</Header>
+
+			<Content>
+				<Title>
+					<Link to={`${id}`}>
+						<h4>{title ? title : ''}</h4>
+					</Link>
+				</Title>
+
+				<Message>
+					<p>{body ? body : ''}</p>
+				</Message>
+			</Content>
+		</PostArea>
+	)
+}
 
 const PostArea = styled.div`
 	width: 100%;
@@ -48,37 +80,9 @@ const Tags = styled.div`
 `
 
 type TypePost = {
+	id: number
 	time: string
 	title: string
 	body: string
 	tags?: [{ tagName: string }]
-}
-
-export default function Post({ time, title, body, tags }: TypePost) {
-	return (
-		<PostArea>
-			<Header>
-				<Tags>
-					<ul>
-						{tags?.map((tag, id) => {
-							return <li key={id}>#{tag.tagName}</li>
-						})}
-					</ul>
-				</Tags>
-				<Time>
-					<p>{time ? time : ''}</p>
-				</Time>
-			</Header>
-
-			<Content>
-				<Title>
-					<h4>{title ? title : ''}</h4>
-				</Title>
-
-				<Message>
-					<p>{body ? body : ''}</p>
-				</Message>
-			</Content>
-		</PostArea>
-	)
 }
