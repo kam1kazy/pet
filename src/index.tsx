@@ -12,6 +12,8 @@ import GlobalStyle from './template/styles'
 import theme from './template/styles/_variable'
 // Components
 import PreLoader from './pages/preloader'
+// Store
+import { usePostsStore } from './store/postsStore'
 
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement as HTMLElement)
@@ -23,6 +25,10 @@ const queryClient = new QueryClient({
 		},
 	},
 })
+
+// Отправляем запрос для загрузки постов с сервера
+usePostsStore.getState().fetchPosts()
+
 root.render(
 	<StrictMode>
 		<QueryClientProvider client={queryClient}>

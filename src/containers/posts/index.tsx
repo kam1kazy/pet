@@ -13,8 +13,11 @@ type TypePost = {
 	body: string
 	tags?: [{ tagName: string }]
 }
+interface Props {
+	items: posts[]
+}
 
-export default function Posts() {
+export default function Posts({ posts }: Array<object>) {
 	// Достаем посты и функцию для замены состояние Scroll из Store
 	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
 	const setScrolling = usePostsStore(({ setScrolling }) => setScrolling)
