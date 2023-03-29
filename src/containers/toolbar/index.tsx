@@ -1,13 +1,8 @@
 import styled from 'styled-components'
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 
+// Компоненты
 import CreatePostButton from '../../components/toolbars/createPost'
 import Search from '../../components/toolbars/search'
-
-const ToolBarsArea = styled.section`
-	display: flex;
-	justify-content: space-between;
-`
 
 export default function ToolBars() {
 	return (
@@ -17,3 +12,8 @@ export default function ToolBars() {
 		</ToolBarsArea>
 	)
 }
+
+const ToolBarsArea = styled.section`
+	display: flex;
+	justify-content: space-between;
+`

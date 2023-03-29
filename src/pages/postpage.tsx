@@ -8,17 +8,22 @@ type QuizParams = {
 
 export default function PostPage() {
 	const { id } = useParams<QuizParams>()
-
-	const post = usePostsStore(useCallback(({ post }) => post[id], []))
-
 	const isLoading = usePostsStore((state) => state.loading)
-	if (isLoading) return <section>Loading...</section>
+	const post = usePostsStore(
+		useCallback(
+			({ posts }) =>
+				posts.find((post: { id: number | undefined }) => post.id === Number(id)),
+			[id]
+		)
+	)
 
-	console.log(post)
+	if (isLoading) return <section>Loading...</section>
 
 	return (
 		<div>
-			<h1>post - {id}</h1>
+			<h1>{post.title}</h1>
+			<br />
+			<p>{post.body}</p>
 		</div>
 	)
 }

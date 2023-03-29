@@ -19,7 +19,7 @@ export default function Post({ time, title, body, tags, id }: TypePost) {
 
 			<Content>
 				<Title>
-					<Link to={`${id}`}>
+					<Link to={`posts/${id}`}>
 						<h4>{title ? title : ''}</h4>
 					</Link>
 				</Title>

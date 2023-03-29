@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { usePostsStore } from '../../store/postsStore'
 
 // Компоненты
@@ -6,22 +6,40 @@ import Post from '../../components/post'
 // Стили
 import styled from 'styled-components'
 
+type TypePost = {
+	id: number
+	time: string
+	title: string
+	body: string
+	tags?: [{ tagName: string }]
+}
+
 export default function Posts() {
+	// Достаем посты и функцию для замены состояние Scroll из Store
 	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
-	const isLoading = usePostsStore((state) => state.loading)
+	const setScrolling = usePostsStore(({ setScrolling }) => setScrolling)
+	const isLoading = usePostsStore(({ loading }) => loading)
+
+	// Состояние для Scroll внутри блока с постами
+	const [scrollPosition, setScrollPosition] = useState(0)
+	// Ссылка на блок с постами
+	const areaRef = useRef<HTMLInputElement>(null)
 
 	if (isLoading) return <section>Loading...</section>
 
-	type TypePost = {
-		id: number
-		time: string
-		title: string
-		body: string
-		tags?: [{ tagName: string }]
+	// Меняем состояние Scroll в Store для того чтобы прятать компонент в Toolbar папка containers
+	const handleScroll = (event: React.UIEvent<HTMLElement, UIEvent>) => {
+		setScrollPosition(event.currentTarget.scrollTop)
+
+		if (scrollPosition < event.currentTarget.scrollTop) {
+			setScrolling(true)
+		} else {
+			setScrolling(false)
+		}
 	}
 
 	return (
-		<PostsArea>
+		<PostsArea ref={areaRef} onScroll={handleScroll}>
 			{posts
 				.map((post: TypePost) => {
 					return (

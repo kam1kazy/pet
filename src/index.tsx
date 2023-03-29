@@ -13,8 +13,6 @@ import theme from './template/styles/_variable'
 // Components
 import PreLoader from './pages/preloader'
 
-// import './template/styles/index.scss'
-
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement as HTMLElement)
 

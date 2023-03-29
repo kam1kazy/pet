@@ -3,6 +3,7 @@ import { PostService } from '../services/post.service'
 
 export const usePostsStore = create((set, get) => ({
 	loading: false,
+	scroll: false,
 	error: null,
 	info: {},
 	posts: [],
@@ -15,6 +16,7 @@ export const usePostsStore = create((set, get) => ({
 		set((state) => ({
 			posts: state.posts.filter((post) => post.id !== id),
 		})),
+	setScrolling: (boolean) => set({ scroll: boolean }),
 
 	async fetchPosts(state) {
 		set({ loading: true })
