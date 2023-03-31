@@ -30,15 +30,22 @@ const PostUrl = styled(Link)`
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		width: 65px;
-		height: 20px;
+		width: 120px;
+		height: 30px;
 		font-size: 12px;
 		opacity: 0;
 		transition: opacity 0.4s ease;
+		background: #000;
+		color: #fff;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
 	}
 
 	&:hover::after {
-		opacity: 0.6;
+		opacity: 1;
 	}
 `
 

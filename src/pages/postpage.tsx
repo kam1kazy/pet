@@ -8,7 +8,6 @@ import {
 	Content,
 	Time,
 	Header,
-	PostArea,
 } from '../components/postItem/styled'
 
 type QuizParams = {
@@ -29,7 +28,7 @@ const PostPage: React.FC = () => {
 	if (isLoading) return <section>Loading...</section>
 
 	return (
-		<div>
+		<>
 			<Header>
 				<Tags>
 					<ul>
@@ -48,7 +47,7 @@ const PostPage: React.FC = () => {
 				<br />
 				<Message>{post.body}</Message>
 			</Content>
-		</div>
+		</>
 	)
 }
 

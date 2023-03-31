@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Form = styled.form`
 	position: relative;
 	box-shadow: rgb(0 0 0 / 2%) 0rem 0.625rem 1.25rem -0.188rem;
-	width: 20rem;
+	width: 22rem;
 
 	&:hover svg {
 		color: #818181;
