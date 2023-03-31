@@ -11,7 +11,7 @@ import routesConfig from './routes/routesConfig'
 import GlobalStyle from './template/styles'
 import theme from './template/styles/_variable'
 // Components
-import PreLoader from './pages/preloader'
+import { PreLoader } from './pages/preloader'
 // Store
 import { usePostsStore } from './store/postsStore'
 

@@ -1,10 +1,8 @@
-import styled from 'styled-components'
+import { CreatePostButton } from '../../components/toolbars/createPost'
+import { Search } from '../../components/toolbars/search'
+import { ToolBarsArea } from './styled'
 
-// Компоненты
-import CreatePostButton from '../../components/toolbars/createPost'
-import Search from '../../components/toolbars/search'
-
-export default function ToolBars() {
+const ToolBars = () => {
 	return (
 		<ToolBarsArea>
 			<Search />
@@ -13,7 +11,4 @@ export default function ToolBars() {
 	)
 }
 
-const ToolBarsArea = styled.section`
-	display: flex;
-	justify-content: space-between;
-`
+export { ToolBars }

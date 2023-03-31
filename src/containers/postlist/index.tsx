@@ -1,25 +1,15 @@
-import { useCallback, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { usePostsStore } from '../../store/postsStore'
+import { Post } from '../../types/data'
+import { PostItem } from '../../components/postitem'
+import { PostsArea } from './styled'
 
-// Компоненты
-import Post from '../../components/post'
-// Стили
-import styled from 'styled-components'
-
-type TypePost = {
-	id: number
-	time: string
-	title: string
-	body: string
-	tags?: [{ tagName: string }]
-}
-interface Props {
-	items: posts[]
+interface PostLostProps {
+	posts: Post[]
 }
 
-export default function Posts({ posts }: Array<object>) {
+const PostList: React.FC<PostLostProps> = (props) => {
 	// Достаем посты и функцию для замены состояние Scroll из Store
-	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
 	const setScrolling = usePostsStore(({ setScrolling }) => setScrolling)
 	const isLoading = usePostsStore(({ loading }) => loading)
 
@@ -43,10 +33,10 @@ export default function Posts({ posts }: Array<object>) {
 
 	return (
 		<PostsArea ref={areaRef} onScroll={handleScroll}>
-			{posts
-				.map((post: TypePost) => {
+			{props.posts
+				.map((post: Post) => {
 					return (
-						<Post
+						<PostItem
 							key={post.id}
 							id={post.id}
 							time={post.time}
@@ -61,13 +51,4 @@ export default function Posts({ posts }: Array<object>) {
 	)
 }
 
-const PostsArea = styled.section`
-	flex: 1 1 auto;
-	overflow-y: scroll;
-
-	-ms-overflow-style: none; /* Internet Explorer 10+ */
-	scrollbar-width: none; /* Firefox */
-	&::-webkit-scrollbar {
-		display: none; /* Safari and Chrome */
-	}
-`
+export { PostList }

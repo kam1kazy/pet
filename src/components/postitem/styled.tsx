@@ -1,36 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-
-export default function Post({ time, title, body, tags, id }: TypePost) {
-	return (
-		<PostArea>
-			<Header>
-				<Tags>
-					<ul>
-						{tags?.map((tag, id) => {
-							return <li key={id}>#{tag.tagName}</li>
-						})}
-					</ul>
-				</Tags>
-				<Time>
-					<p>{time ? time : ''}</p>
-				</Time>
-			</Header>
-
-			<Content>
-				<Title>
-					<Link to={`posts/${id}`}>
-						<h4>{title ? title : ''}</h4>
-					</Link>
-				</Title>
-
-				<Message>
-					<p>{body ? body : ''}</p>
-				</Message>
-			</Content>
-		</PostArea>
-	)
-}
 
 const PostArea = styled.div`
 	width: 100%;
@@ -52,18 +20,15 @@ const Time = styled.div`
 const Content = styled.div`
 	padding: 1rem 0.8rem;
 `
-
 const Title = styled.div`
 	font-size: 1.6rem;
 	font-weight: 500;
 	line-height: 2.2rem;
 	margin-bottom: 1rem;
 `
-
 const Message = styled.div`
 	line-height: 2rem;
 `
-
 const Tags = styled.div`
 	font-size: 0.7rem;
 	font-weight: 300;
@@ -78,11 +43,4 @@ const Tags = styled.div`
 		margin-left: 0.6rem;
 	}
 `
-
-type TypePost = {
-	id: number
-	time: string
-	title: string
-	body: string
-	tags?: [{ tagName: string }]
-}
+export {Tags, Message, Title, Content, Time, Header, PostArea}

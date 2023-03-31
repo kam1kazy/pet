@@ -1,25 +1,11 @@
-import styled from 'styled-components'
 import { RiMistLine } from 'react-icons/ri'
+import { NavMenu } from './styled'
 
-const NavMenu = styled.div`
-	svg {
-		width: 1.563rem;
-		height: 1.563rem;
-		transition: transform ${(props) => props.theme.transition};
-	}
-
-	&:hover {
-		cursor: pointer;
-		svg {
-			transform: ${(props) => props.theme.transformTranslateIcons};
-		}
-	}
-`
-
-export default function Menu() {
+const Menu: React.FC = () => {
 	return (
 		<NavMenu>
 			<RiMistLine />
 		</NavMenu>
 	)
 }
+export { Menu }

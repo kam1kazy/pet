@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Editor } from 'react-draft-wysiwyg'
 
 // Компоненты
-import InputField from '../inputField'
+import { InputField } from '../inputField'
 
 // Стили
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'

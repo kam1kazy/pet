@@ -1,5 +1,7 @@
 import { CiBookmarkMinus } from 'react-icons/ci'
 
-export default function Bookmark() {
+const Bookmark: React.FC = () => {
 	return <CiBookmarkMinus />
 }
+
+export { Bookmark }

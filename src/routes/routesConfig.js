@@ -1,9 +1,9 @@
 import { createBrowserRouter, Outlet } from 'react-router-dom'
-import Home from '../pages/home'
-import CreatePost from '../pages/createpost'
-import Header from '../containers/header'
-import Footer from '../containers/footer'
-import PostPage from '../pages/postpage'
+import { Home } from '../pages/home'
+import { CreatePost } from '../pages/createpost'
+import { Header } from '../containers/header'
+import { Footer } from '../containers/footer'
+import { PostPage } from '../pages/postpage'
 
 const routesConfig = createBrowserRouter([
 	{

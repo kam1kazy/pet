@@ -6,7 +6,7 @@ type QuizParams = {
 	id: string
 }
 
-export default function PostPage() {
+const PostPage = () => {
 	const { id } = useParams<QuizParams>()
 	const isLoading = usePostsStore((state) => state.loading)
 	const post = usePostsStore(
@@ -27,3 +27,5 @@ export default function PostPage() {
 		</div>
 	)
 }
+
+export { PostPage }

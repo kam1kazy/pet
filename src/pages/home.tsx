@@ -4,21 +4,20 @@ import { useCallback } from 'react'
 import { usePostsStore } from '../store/postsStore'
 
 // компоненты
-import Toolbars from '../containers/toolbar'
-import CarouselTags from '../components/carouselTags'
-import Posts from '../containers/posts'
+import { ToolBars } from '../containers/toolbar'
+import { CarouselTags } from '../components/carouselTags'
+import { PostList } from '../containers/postlist'
 
-export default function App() {
-	// usePostsStore.getState().fetchPosts()
+const Home = () => {
 	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
-
-	console.log(posts)
 
 	return (
 		<>
-			<Toolbars />
+			<ToolBars />
 			<CarouselTags />
-			<Posts posts={posts} />
+			<PostList posts={posts} />
 		</>
 	)
 }
+
+export { Home }

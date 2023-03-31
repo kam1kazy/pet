@@ -1,6 +1,6 @@
 import TextEditor from '../components/textEditor'
 
-function App() {
+const CreatePost = () => {
 	return (
 		<>
 			<TextEditor />
@@ -8,4 +8,4 @@ function App() {
 	)
 }
 
-export default App
+export { CreatePost }

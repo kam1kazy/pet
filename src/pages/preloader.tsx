@@ -1,4 +1,4 @@
-function PreLoader() {
+const PreLoader = () => {
 	return (
 		<>
 			<h1>GONE</h1>
@@ -6,4 +6,4 @@ function PreLoader() {
 	)
 }
 
-export default PreLoader
+export { PreLoader }
