@@ -1,5 +1,5 @@
-import { Alerts } from '../../components/toolbars/notification'
-import { Menu } from '../../components/toolbars/menu'
+import { Alerts } from '../../components/toolBars/notification'
+import { Menu } from '../../components/toolBars/menu'
 import { HeaderArea, Brand } from './styled'
 
 const Header: React.FC = () => {
@@ -12,4 +12,4 @@ const Header: React.FC = () => {
 	)
 }
 
-export {Header}
+export { Header }

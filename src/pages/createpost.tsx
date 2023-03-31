@@ -1,11 +1,7 @@
 import TextEditor from '../components/textEditor'
 
 const CreatePost = () => {
-	return (
-		<>
-			<TextEditor />
-		</>
-	)
+	return <TextEditor />
 }
 
 export { CreatePost }

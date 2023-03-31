@@ -4,16 +4,16 @@ import { useCallback } from 'react'
 import { usePostsStore } from '../store/postsStore'
 
 // компоненты
-import { ToolBars } from '../containers/toolbar'
+import { Toolbars } from '../containers/toolbars'
 import { CarouselTags } from '../components/carouselTags'
-import { PostList } from '../containers/postlist'
+import { PostList } from '../containers/postList'
 
 const Home = () => {
 	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
 
 	return (
 		<>
-			<ToolBars />
+			<Toolbars />
 			<CarouselTags />
 			<PostList posts={posts} />
 		</>

@@ -1,14 +1,14 @@
 import { useRef, useState } from 'react'
 import { usePostsStore } from '../../store/postsStore'
 import { Post } from '../../types/data'
-import { PostItem } from '../../components/postitem'
+import { PostItem } from '../../components/postItem'
 import { PostsArea } from './styled'
 
-interface PostLostProps {
+interface PostListProps {
 	posts: Post[]
 }
 
-const PostList: React.FC<PostLostProps> = (props) => {
+const PostList: React.FC<PostListProps> = (props) => {
 	// Достаем посты и функцию для замены состояние Scroll из Store
 	const setScrolling = usePostsStore(({ setScrolling }) => setScrolling)
 	const isLoading = usePostsStore(({ loading }) => loading)
