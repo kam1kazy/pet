@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const widthDecorLine = 55
 
 const CarouselArea = styled.section`
-	margin: 2.2rem 0.2rem 1rem;
+	margin: 1.5rem 0.2rem 0.5rem;
 `
 
 const TagList = styled.ul`
@@ -22,6 +22,7 @@ const ListElement = styled.li`
 	white-space: nowrap;
 	position: relative;
 	opacity: 0.6;
+	font-size: 14px;
 	cursor: pointer;
 
 	&::before {

@@ -1,6 +1,14 @@
-import { Link } from 'react-router-dom'
 import { Post } from '../../types/data'
-import { Tags, Message, Title, Content, Time, Header, PostArea } from './styled'
+import {
+	Tags,
+	Message,
+	Title,
+	Content,
+	Time,
+	Header,
+	PostArea,
+	PostUrl,
+} from './styled'
 
 interface Posts extends Post {}
 
@@ -22,17 +30,17 @@ const PostItem: React.FC<Posts> = (props) => {
 				</Time>
 			</Header>
 
-			<Content>
-				<Title>
-					<Link to={`posts/${id}`}>
+			<PostUrl to={`posts/${id}`}>
+				<Content>
+					<Title>
 						<h4>{title ? title : ''}</h4>
-					</Link>
-				</Title>
+					</Title>
 
-				<Message>
-					<p>{body ? body : ''}</p>
-				</Message>
-			</Content>
+					<Message>
+						<p>{body ? body : ''}</p>
+					</Message>
+				</Content>
+			</PostUrl>
 		</PostArea>
 	)
 }

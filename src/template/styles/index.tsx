@@ -21,19 +21,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    display: flex;
-    flex-flow: column;
-
-    margin: 0 auto;
-    overflow: hidden;
+    position: relative;
     width: 30rem;
     height: 97vh;
     border: 0.25rem solid #fefefe;
     border-radius: 1.25rem;
-    padding: 2.1875rem 2.5rem;
     box-shadow: 0rem 0.75rem 2.5rem -0.25rem rgb(0 0 0 / 20%);
-    position: relative;
+    overflow: hidden;
+
   }
+
 
   a {
     text-decoration: none;

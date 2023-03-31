@@ -1,4 +1,4 @@
-const PreLoader = () => {
+const PreLoader: React.FC = () => {
 	return <h1>GONE</h1>
 }
 

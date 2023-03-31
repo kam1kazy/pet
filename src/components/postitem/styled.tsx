@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const PostArea = styled.div`
 	width: 100%;
-	margin: 0 auto 2rem;
-	padding: 0.5rem 0.5rem 1rem;
+	padding: 0.5rem 0.5rem;
 `
 const Header = styled.div`
 	border-bottom: 1px solid #eee;
@@ -18,8 +18,30 @@ const Time = styled.div`
 	margin-left: 1rem;
 `
 const Content = styled.div`
-	padding: 1rem 0.8rem;
+	padding: 1.8rem 0.8rem 3rem 0.8rem;
+	margin-bottom: 0.8rem;
 `
+
+const PostUrl = styled(Link)`
+	position: relative;
+
+	&::after {
+		content: 'читать -->';
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 65px;
+		height: 20px;
+		font-size: 12px;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+	&:hover::after {
+		opacity: 0.6;
+	}
+`
+
 const Title = styled.div`
 	font-size: 1.6rem;
 	font-weight: 500;
@@ -43,4 +65,4 @@ const Tags = styled.div`
 		margin-left: 0.6rem;
 	}
 `
-export {Tags, Message, Title, Content, Time, Header, PostArea}
+export { Tags, Message, Title, Content, Time, Header, PostArea, PostUrl }

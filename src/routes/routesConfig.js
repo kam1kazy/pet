@@ -24,6 +24,10 @@ const routesConfig = createBrowserRouter([
 				element: <CreatePost />,
 			},
 			{
+				path: '/createpost/:id',
+				element: <CreatePost />,
+			},
+			{
 				path: '/posts',
 				element: <Home />,
 			},

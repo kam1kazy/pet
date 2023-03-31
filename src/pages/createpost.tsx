@@ -1,6 +1,6 @@
 import TextEditor from '../components/textEditor'
 
-const CreatePost = () => {
+const CreatePost: React.FC = () => {
 	return <TextEditor />
 }
 

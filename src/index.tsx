@@ -1,19 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { RouterProvider } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import 'reset-css'
 
-// Router
-import routesConfig from './routes/routesConfig'
 // Styled
 import GlobalStyle from './template/styles'
 import theme from './template/styles/_variable'
-// Components
-import { PreLoader } from './pages/preloader'
 // Store
 import { usePostsStore } from './store/postsStore'
+import { Layout } from './containers/layout'
 
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement as HTMLElement)
@@ -34,7 +30,7 @@ root.render(
 		<QueryClientProvider client={queryClient}>
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
-				<RouterProvider router={routesConfig} fallbackElement={<PreLoader />} />
+				<Layout />
 			</ThemeProvider>
 		</QueryClientProvider>
 	</StrictMode>

@@ -19,8 +19,8 @@ const Notification = styled.div`
 const MessageList = styled.div`
 	position: absolute;
 	top: 45px;
-	right: -30px;
-	width: 295px;
+	right: -20px;
+	width: 325px;
 	height: 400px;
 	background: white;
 	z-index: 2;

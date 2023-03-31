@@ -1,14 +1,10 @@
 import { useCallback } from 'react'
-
-// store
 import { usePostsStore } from '../store/postsStore'
-
-// компоненты
 import { Toolbars } from '../containers/toolbars'
 import { CarouselTags } from '../components/carouselTags'
 import { PostList } from '../containers/postList'
 
-const Home = () => {
+const Home: React.FC = () => {
 	const posts = usePostsStore(useCallback(({ posts }) => posts, []))
 
 	return (
