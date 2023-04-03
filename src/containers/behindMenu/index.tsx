@@ -5,7 +5,7 @@ import { IoNotificationsOutline } from 'react-icons/io5'
 import { TbLogout } from 'react-icons/tb'
 import {
 	Menu,
-	Link,
+	LinkItem,
 	MenuList,
 	MenuBar,
 	UserCount,
@@ -41,30 +41,30 @@ const BehindMenu: React.FC = () => {
 					</Header>
 					<MenuBar>
 						<MenuList>
-							<Link>
+							<LinkItem to='#'>
 								<CgAddR />
 								<span>Add new post</span>
-							</Link>
-							<Link>
+							</LinkItem>
+							<LinkItem to='#'>
 								<CgFileDocument />
 								<span>You articles</span>
-							</Link>
-							<Link>
+							</LinkItem>
+							<LinkItem to='#'>
 								<BiChart />
 								<span>You activities</span>
-							</Link>
-							<Link>
+							</LinkItem>
+							<LinkItem to='#'>
 								<GiAchievement />
 								<span>Achievement</span>
-							</Link>
-							<Link>
+							</LinkItem>
+							<LinkItem to='#'>
 								<IoNotificationsOutline />
 								<span>Notification</span>
-							</Link>
-							<Link>
+							</LinkItem>
+							<LinkItem to='/signup'>
 								<TbLogout />
 								<span>Logout</span>
-							</Link>
+							</LinkItem>
 						</MenuList>
 					</MenuBar>
 				</SideBar>

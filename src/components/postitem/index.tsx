@@ -32,13 +32,9 @@ const PostItem: React.FC<Posts> = (props) => {
 
 			<PostUrl to={`posts/${id}`}>
 				<Content>
-					<Title>
-						<h4>{title ? title : ''}</h4>
-					</Title>
+					<Title>{title ? title : ''}</Title>
 
-					<Message>
-						<p>{body ? body : ''}</p>
-					</Message>
+					<Message>{body ? body : ''}</Message>
 				</Content>
 			</PostUrl>
 		</PostArea>

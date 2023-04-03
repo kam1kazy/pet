@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Menu = styled.div`
 	display: flex;
@@ -21,6 +22,7 @@ const Menu = styled.div`
 	-webkit-border-radius: 1.55rem;
 	-moz-border-radius: 1.55rem;
 	background: #1c1e20;
+	color: ${(props) => props.theme.textWhiteColor};
 
 	&.active-menu {
 		left: 285px;
@@ -35,7 +37,6 @@ const SideBar = styled.section`
 	bottom: 0;
 	margin: auto;
 	position: absolute;
-	color: #fff;
 	font-size: 20px;
 `
 const Header = styled.div``
@@ -75,10 +76,11 @@ const MenuBar = styled.div``
 const MenuList = styled.ul`
 	font-size: 16px;
 `
-const Link = styled.li`
+const LinkItem = styled(Link)`
 	display: flex;
 	margin-bottom: 40px;
 	cursor: pointer;
+	color: ${(props) => props.theme.textWhiteColor};
 
 	svg {
 		margin-right: 20px;
@@ -88,7 +90,7 @@ const Link = styled.li`
 
 export {
 	Menu,
-	Link,
+	LinkItem,
 	MenuList,
 	MenuBar,
 	UserCount,

@@ -6,7 +6,7 @@ const PostArea = styled.div`
 	padding: 0.5rem 0.5rem;
 `
 const Header = styled.div`
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid ${(props) => props.theme.lineColor};
 	padding: 0 0.5rem 0.5rem;
 	display: flex;
 	justify-content: flex-end;
@@ -49,13 +49,13 @@ const PostUrl = styled(Link)`
 	}
 `
 
-const Title = styled.div`
+const Title = styled.h4`
 	font-size: 1.6rem;
 	font-weight: 500;
 	line-height: 2.2rem;
 	margin-bottom: 1rem;
 `
-const Message = styled.div`
+const Message = styled.p`
 	line-height: 2rem;
 `
 const Tags = styled.div`
