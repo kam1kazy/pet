@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Notification = styled.div`
-	position: relative;
+	/* position: relative; */
 
 	svg {
 		width: 1.563rem;
@@ -16,12 +16,22 @@ const Notification = styled.div`
 		}
 	}
 `
+const Overlay = styled.div`
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	background: rgb(104 104 104 / 46%);
+	z-index: 9;
+`
 const MessageList = styled.div`
 	position: absolute;
-	top: 45px;
-	right: -20px;
+	top: 75px;
+	right: 30px;
 	width: 325px;
-	height: 400px;
+	height: 440px;
 	background: white;
 	z-index: 2;
 	border-radius: 10px;
@@ -69,4 +79,4 @@ const MessageList = styled.div`
 		color: #7b7b7b;
 	}
 `
-export { Notification, MessageList }
+export { Notification, MessageList, Overlay }

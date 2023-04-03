@@ -6,17 +6,16 @@ import { InputField } from '../inputField'
 
 // Стили
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
-import styles from './index.module.scss'
 import './index.scss'
 
-export default function TextEditor() {
+const TextEditor: React.FC = () => {
 	// eslint-disable-next-line no-unused-vars
-	const [contentState, setContentState] = useState()
+	const [contentState, setContentState] = useState<any>([])
 	// const editorState = EditorState.createEmpty()
 
 	return (
 		<>
-			<div className={styles.header}>
+			<div className='header'>
 				<InputField title='Заголовок' />
 			</div>
 			<Editor
@@ -41,7 +40,9 @@ export default function TextEditor() {
 				}}
 				hashtag={{}}
 			/>
-			{/* <textarea disabled value={JSON.stringify(contentState, null, 4)} /> */}
+			<textarea disabled value={JSON.stringify(contentState, null, 4)} />
 		</>
 	)
 }
+
+export { TextEditor }

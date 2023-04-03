@@ -1,4 +1,4 @@
-import TextEditor from '../components/textEditor'
+import { TextEditor } from '../components/textEditor'
 
 const CreatePost: React.FC = () => {
 	return <TextEditor />

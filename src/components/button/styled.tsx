@@ -13,7 +13,4 @@ const ButtonArea = styled.div`
 	align-items: center;
 	cursor: pointer;
 `
-
-export default function Button({ title, action }) {
-	// return <ButtonArea onClick={action}>{title}</ButtonArea>
-}
+export { ButtonArea }

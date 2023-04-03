@@ -1,68 +1,66 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { RiNotificationLine } from 'react-icons/ri'
-import { Notification, MessageList } from './styled'
-
-// Клик вне блока с уведомлениями
-function useOutsideClick(ref: any, setToggle: any) {
-	useEffect(() => {
-		// События на клик вне блока
-		function handleClickOutside(event: any) {
-			if (ref.current && !ref.current.contains(event.target)) {
-				setToggle(false)
-			}
-		}
-		// Привязываем слушатель события
-		document.addEventListener('mousedown', handleClickOutside)
-
-		return () => {
-			// Отвязываем слушатель события
-			document.removeEventListener('mousedown', handleClickOutside)
-		}
-	}, [ref, setToggle])
-}
+import { Notification, MessageList, Overlay } from './styled'
 
 const Alerts: React.FC = () => {
 	const [toggle, setToggle] = useState(false)
-
 	const wrapperRef = useRef(null)
-	useOutsideClick(wrapperRef, setToggle)
+
+	const handleToggle = (
+		event:
+			| React.MouseEvent<SVGElement, MouseEvent>
+			| React.MouseEvent<HTMLDivElement, MouseEvent>
+	) => {
+		event.stopPropagation()
+		const target = event.target as Element
+
+		console.log()
+
+		if (target.classList[0] === Overlay.styledComponentId) {
+			setToggle(false)
+		} else {
+			setToggle(true)
+		}
+	}
 
 	return (
 		<Notification>
-			<RiNotificationLine onClick={() => setToggle(!toggle)} />
+			<RiNotificationLine onClick={(event) => handleToggle(event)} />
 			{toggle ? (
-				<MessageList id='notification' ref={wrapperRef}>
-					<ul>
-						<li>
-							<h6>Title Message</h6>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
-								odio non commodi animi minima!
-							</p>
-						</li>
-						<li>
-							<h6>Title Message</h6>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
-								odio non commodi animi minima!
-							</p>
-						</li>
-						<li>
-							<h6>Title Message</h6>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
-								odio non commodi animi minima!
-							</p>
-						</li>
-						<li>
-							<h6>Title Message</h6>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
-								odio non commodi animi minima!
-							</p>
-						</li>
-					</ul>
-				</MessageList>
+				<Overlay onClick={(event) => handleToggle(event)}>
+					<MessageList id='notification' ref={wrapperRef}>
+						<ul>
+							<li>
+								<h6>Title Message</h6>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+									odio non commodi animi minima!
+								</p>
+							</li>
+							<li>
+								<h6>Title Message</h6>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+									odio non commodi animi minima!
+								</p>
+							</li>
+							<li>
+								<h6>Title Message</h6>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+									odio non commodi animi minima!
+								</p>
+							</li>
+							<li>
+								<h6>Title Message</h6>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, unde
+									odio non commodi animi minima!
+								</p>
+							</li>
+						</ul>
+					</MessageList>
+				</Overlay>
 			) : null}
 		</Notification>
 	)
