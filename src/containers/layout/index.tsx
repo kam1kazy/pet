@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
-
 import { useToggleSwitchesStore } from '../../store/toggleSwitchesStore'
+import { Main } from './styled'
 
-const Layout: React.FC = () => {
+const Layout: React.FC = ({ children }: any) => {
 	const sideMenu = useToggleSwitchesStore(
 		useCallback(({ sideMenu }) => sideMenu, [])
 	)
@@ -11,7 +11,7 @@ const Layout: React.FC = () => {
 
 	const toggle = sideMenu ? 'active-menu' : ''
 
-	return <></>
+	return <Main className={toggle}>{children}</Main>
 }
 
 export { Layout }

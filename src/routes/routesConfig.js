@@ -9,7 +9,7 @@ import { Header } from '../containers/header'
 import { Footer } from '../containers/footer'
 import { Signup } from '../containers/signUp'
 import { BehindMenu } from '../containers/behindMenu'
-import { Main } from '../containers/layout/styled'
+import { Layout } from '../containers/layout'
 
 const routesConfig = createBrowserRouter([
 	{
@@ -17,11 +17,11 @@ const routesConfig = createBrowserRouter([
 			<>
 				<BehindMenu />
 				{/* //! Вот этот блок Main нужно сделать компонентом который принимает Children */}
-				<Main>
+				<Layout>
 					<Header />
 					<Outlet />
 					<Footer />
-				</Main>
+				</Layout>
 			</>
 		),
 		children: [
